@@ -29,7 +29,7 @@ ingredients_list = st.multiselect( 'Choose up to 5 ingredients:', my_dataframe, 
 if ingredients_list:
 
     ingredients_string = ''
-
+     #search on SEARCH_ON
     for fruit_chosen in ingredients_list:
           ingredients_string += fruit_chosen + ' '
           st. subheader (fruit_chosen + ' Nutrition Information' )
