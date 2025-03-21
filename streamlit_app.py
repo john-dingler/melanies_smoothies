@@ -2,7 +2,7 @@
 import streamlit as st
 from snowflake.snowpark.functions import col
 import requests
-
+# Debugging
 st.success("Snowpark is working!")
 # helpful_links = [
 #     "https://docs.streamlit.io",
