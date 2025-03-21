@@ -10,9 +10,6 @@ helpful_links = [
     "https://docs.snowflake.com/en/release-notes/streamlit-in-snowflake"
 ]
 
-smoothiefroot_response = requests.get ("https://my.smoothiefroot.com/api/fruit/watermelon")
-st. text (smoothiefroot_response)
-
 # Write directly to the app
 st.title(":cup_with_straw: Custom Smoothies Here!! :cup_with_straw:")
 st.write("Choose the fruits you want in your custom Smoothie!")
@@ -43,7 +40,9 @@ if ingredients_list:
     #st.write(my_insert_stmt)
     #st.stop()
     time_to_insert = st. button ('Submit Order')
-
+    
+smoothiefroot_response = requests.get ("https://my.smoothiefroot.com/api/fruit/watermelon")
+st. text (smoothiefroot_response)
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered,' + name_on_order + '!', icon="✅")
